@@ -47,15 +47,6 @@
    - [3 Node Active-Active Redis Enterprise Cluster for Developers using Docker Desktop](http://collabnix.com/3-node-redis-enterprise-cluster-using-docker-desktop/)
    
 
-# RedisLabs Vs Redis OSS 
-
-| Redis OSS       | RedisLabs       | 
-| ------------- |:-------------:|
-|   Leading OSS in-memory database platform, supporting any high performance operational, analytics or hybrid use case            |  The OSS home and commercial provider of Redis Enterprise technology, platform, products and services          |  
-
-
-
-
 
 ### Redis Data Store | API
 
@@ -108,13 +99,19 @@
      
 
 - [SCAN](https://github.com/collabnix/redisplanet/blob/master/datastore/scan/README.md)
- 
-
-### Advanced API Implementation
-
 - [INFO](https://github.com/collabnix/redisplanet/tree/master/advancedapi#info)
 - [CLIENT LIST](https://github.com/collabnix/redisplanet/tree/master/advancedapi#client-list)
 
+### Advanced API Implementation
+
+- [Bitmaps]()
+- [Bit Fields]()
+- [HyperLogLogs]()
+- [Geospatial Indexes]()
+- [Transactions]()
+- [Pub Sub]()
+- [Lua Scripts]()
+- [Modules]()
 
 
   
