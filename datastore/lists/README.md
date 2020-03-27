@@ -25,10 +25,25 @@
 ```
 127.0.0.1:6379> rpush mylist A
 (integer) 1
+```
+
+|A| 
+
+```
 127.0.0.1:6379> rpush mylist B
 (integer) 2
+```
+
+|A|B|
+
+```
 127.0.0.1:6379> lpush mylist first
 (integer) 3
+```
+
+|first|A|B|
+
+```
 127.0.0.1:6379> lrange mylist 0 -1
 1) "first"
 2) "A"
@@ -46,6 +61,12 @@
 ```
 127.0.0.1:6379> rpush mylist 2 3 4 5 "foo bar"
 (integer) 8
+```
+
+|first|A|B|2|3|4|5| foo bar|
+
+
+```
 127.0.0.1:6379> lrange mylist 0 -1
 1) "first"
 2) "A"
@@ -77,19 +98,45 @@ Popping elements is the operation of both
 6) "4"
 7) "5"
 8) "foo bar"
+```
+
+```
 127.0.0.1:6379> rpush mylist a b c
 (integer) 11
+```
+
+|first|A|B|2|3|4|5|foo bar|a|b|c|
+
+```
 127.0.0.1:6379> rpop mylist
 "c"
+```
+
+|first|A|B|2|3|4|5|foo bar|a|b|
+
+```
 127.0.0.1:6379> rpop mylist
 "b"
+```
+
+|first|A|B|2|3|4|5|foo bar|a|
+
+
+```
 127.0.0.1:6379> rpop mylist
 "a"
+```
+
+|first|A|B|2|3|4|5|foo bar|
+
+
+```
 127.0.0.1:6379> rpop mylist
 "foo bar"
 127.0.0.1:6379>
 ```
 
+|first|A|B|2|3|4|5|
 
 ## Common Usage of Lists
 
